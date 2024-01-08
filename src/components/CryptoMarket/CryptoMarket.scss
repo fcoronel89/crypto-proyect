@@ -1,0 +1,64 @@
+.table-container {
+    overflow-x: auto;
+    margin-bottom: 3rem;
+}
+.crypto-data-grid {
+    position: relative;
+    height: 600px;
+    .MuiDataGrid-columnHeader {
+        background-color: #111
+    }
+    .MuiDataGrid-toolbarContainer {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    .MuiDataGrid-columnHeaderTitleContainer {
+        font-size: 1.1rem;
+        margin-left: .5rem;
+    }
+    .MuiDataGrid-cell {
+        font-size: 1rem;
+    }
+    .MuiDataGrid-cellContent {
+        padding-left: .5rem;  
+    }
+    .odd-row {
+        background-color: rgba(30, 4, 52, 0.9);
+
+        &:hover {
+            background-color: rgba(30, 4, 52, 0.9) !important;
+        }
+    }
+    .even-row {
+        background-color: rgba(20, 4, 34, 0.9);
+        &:hover {
+            background-color: rgba(20, 4, 34, 0.9) !important;
+        }
+    }
+    .cellWithImg {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        img {
+            width: 2rem;
+        }
+
+        span {
+            text-transform: capitalize;
+        }
+    }
+
+    .MuiDataGrid-footerContainer {
+        border: none
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .crypto-data-grid {
+        .MuiDataGrid-columnHeaderTitleContainer {
+            font-size: 1rem;
+        }
+    }
+    
+}
