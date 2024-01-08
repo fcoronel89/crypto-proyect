@@ -51,7 +51,7 @@ const CryptoMarket = () => {
       </Box>
       
       {isLoading && <Box position="relative" minHeight={"600px"}><Loading /></Box>}
-      {error && "Error"}
+      {error && <p>{error.message}</p>}
       {!error && data ? (
         <Box width="100%" className="table-container">
         <DataGrid
@@ -78,7 +78,6 @@ const CryptoMarket = () => {
           }
           density="comfortable"
           loading={isLoading}
-          loadingOverlayComponent={Loading}
           isRowSelectable={() => false}
           isCellEditable={() => false}
           initialState={{

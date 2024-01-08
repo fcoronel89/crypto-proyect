@@ -3,6 +3,7 @@ import { getValuesByCriptoAndFiat } from "../../api/requests";
 import { v4 as uuidv4 } from "uuid";
 import { useState } from "react";
 import { Box, Typography } from "@mui/material";
+import { GridAlignment } from "@mui/x-data-grid";
 
 type DataRows = {
   exchange: string;
@@ -40,13 +41,16 @@ const useDataGrid = () => {
       },
     });
 
+
+  const alignLeft = "left" as GridAlignment;
+
   const columns = [
     {
       field: "exchange",
       headerName: "Exchange",
       flex: 1,
-      headerAlign: "left",
-      align: "left",
+      headerAlign: alignLeft,
+      align: alignLeft,
       renderCell: ({ row }: { row: DataRows }) => {
         const exchange = row.exchange;
         console.log(row);
@@ -63,32 +67,32 @@ const useDataGrid = () => {
       headerName: "Comprar",
       type: "number",
       flex: 1,
-      headerAlign: "left",
-      align: "left",
+      headerAlign: alignLeft,
+      align: alignLeft,
     },
     {
       field: "totalAsk",
       headerName: "Compra Total",
       type: "number",
       flex: 1,
-      headerAlign: "left",
-      align: "left",
+      headerAlign: alignLeft,
+      align: alignLeft,
     },
     {
       field: "bid",
       headerName: "Vender",
       type: "number",
       flex: 1,
-      headerAlign: "left",
-      align: "left",
+      headerAlign: alignLeft,
+      align: alignLeft,
     },
     {
       field: "totalBid",
       headerName: "Venta Total",
       type: "number",
       flex: 1,
-      headerAlign: "left",
-      align: "left",
+      headerAlign: alignLeft,
+      align: alignLeft,
     },
   ];
 
